@@ -182,7 +182,7 @@ namespace DashDownloader
 
             FileInfo initFileInfo = new FileInfo(initFilePath);
             string initExtension = initFileInfo.Extension;
-            string resultFileName = AppendExtension(rootQualifier, initExtension);
+            string resultFileName = AppendExtension(rootQualifier + "final", initExtension);
             string resultFilePath = Path.Combine(outputPath, resultFileName);
 
             if(File.Exists(resultFilePath))
