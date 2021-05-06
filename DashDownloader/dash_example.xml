@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MPD xmlns="urn:mpeg:dash:schema:mpd:2011" profiles="urn:mpeg:dash:profile:isoff-live:2011" type="static" mediaPresentationDuration="PT1285.9090576171875S" minBufferTime="PT2S">
+	<Period id="0">
+		<AdaptationSet id="3" segmentAlignment="true" lang="ru0" contentType="audio">
+			<Representation mimeType="audio/webm" audioSamplingRate="48000" bandwidth="83783" codecs="opus" id="4">
+				<AudioChannelConfiguration schemeIdUri="urn:mpeg:dash:23003:3:audio_channel_configuration:2011" value="2"></AudioChannelConfiguration>
+				<SegmentTemplate initialization="4.547107-0/init.webm" media="4.547107-0/$Number$.webm" startNumber="1" timescale="1000000">
+					<SegmentTimeline>
+						<S t="0" d="6001000"></S>
+						<S t="6001000" d="6000000" r="212"></S>
+						<S t="1284001000" d="1961000"></S>
+					</SegmentTimeline>
+				</SegmentTemplate>
+			</Representation>
+		</AdaptationSet>
+		<AdaptationSet frameRate="1000000/42000" id="1" segmentAlignment="true" par="16:9" maxWidth="1280" maxHeight="720" contentType="video">
+			<Representation sar="1:1" mimeType="video/webm" bandwidth="2137007" codecs="vp09.00.30.08.00.01.01.01.00" height="486" id="1" width="864">
+				<SegmentTemplate initialization="7.547107/init.webm" media="7.547107/$Number$.webm" startNumber="1" timescale="1000000">
+					<SegmentTimeline>
+						<S t="0" d="10010000" r="127"></S>
+						<S t="1281280000" d="4629000"></S>
+					</SegmentTimeline>
+				</SegmentTemplate>
+			</Representation>
+			<Representation sar="1:1" mimeType="video/webm" bandwidth="742460" codecs="vp09.00.21.08.00.01.01.01.00" height="360" id="2" width="640">
+				<SegmentTemplate initialization="6.547107/init.webm" media="6.547107/$Number$.webm" startNumber="1" timescale="1000000">
+					<SegmentTimeline>
+						<S t="0" d="10010000" r="127"></S>
+						<S t="1281280000" d="4629000"></S>
+					</SegmentTimeline>
+				</SegmentTemplate>
+			</Representation>
+			<Representation sar="1:1" mimeType="video/webm" bandwidth="4908349" codecs="vp09.00.31.08.00.01.01.01.00" height="720" id="5" width="1280">
+				<SegmentTemplate initialization="8.547107/init.webm" media="8.547107/$Number$.webm" startNumber="1" timescale="1000000">
+					<SegmentTimeline>
+						<S t="0" d="10010000" r="127"></S>
+						<S t="1281280000" d="4629000"></S>
+					</SegmentTimeline>
+				</SegmentTemplate>
+			</Representation>
+		</AdaptationSet>
+		<AdaptationSet id="0" segmentAlignment="true" lang="ru1" contentType="audio">
+			<Representation mimeType="audio/webm" audioSamplingRate="48000" bandwidth="73724" codecs="opus" id="0">
+				<AudioChannelConfiguration schemeIdUri="urn:mpeg:dash:23003:3:audio_channel_configuration:2011" value="2"></AudioChannelConfiguration>
+				<SegmentTemplate initialization="4.547107-1/init.webm" media="4.547107-1/$Number$.webm" startNumber="1" timescale="1000000">
+					<SegmentTimeline>
+						<S t="0" d="6001000"></S>
+						<S t="6001000" d="6000000" r="212"></S>
+						<S t="1284001000" d="1961000"></S>
+					</SegmentTimeline>
+				</SegmentTemplate>
+			</Representation>
+		</AdaptationSet>
+		<AdaptationSet id="2" segmentAlignment="true" lang="ru2" contentType="audio">
+			<Representation mimeType="audio/webm" audioSamplingRate="48000" bandwidth="94242" codecs="opus" id="3">
+				<AudioChannelConfiguration schemeIdUri="urn:mpeg:dash:23003:3:audio_channel_configuration:2011" value="2"></AudioChannelConfiguration>
+				<SegmentTemplate initialization="4.547107-2/init.webm" media="4.547107-2/$Number$.webm" startNumber="1" timescale="1000000">
+					<SegmentTimeline>
+						<S t="0" d="6001000"></S>
+						<S t="6001000" d="6000000" r="212"></S>
+						<S t="1284001000" d="1941000"></S>
+					</SegmentTimeline>
+				</SegmentTemplate>
+			</Representation>
+		</AdaptationSet>
+	</Period>
+</MPD>
