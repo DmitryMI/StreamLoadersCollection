@@ -60,6 +60,11 @@ namespace M3uDownloader
             return stringBuilder.ToString();
         }
 
+        public static string ReplaceInvalidChars(string filename)
+        {
+            return string.Join("_", filename.Split(Path.GetInvalidFileNameChars()));
+        }
+
         static void DownloadStream(WebClient webClient, string source, string outputPath)
         {
             SetHeaders(webClient);
@@ -81,8 +86,9 @@ namespace M3uDownloader
             foreach (var media in playlistContent.Medias)
             {
                 Uri absoluteUri = new Uri(rootPathUri, media.MediaFile);
-                Console.Write(absoluteUri.Segments.Last() + "... ");                
-                string targetPath = Path.Combine(outputPath, absoluteUri.Segments.Last());
+                Console.Write(absoluteUri.Segments.Last() + "... ");
+                string targetName = ReplaceInvalidChars(absoluteUri.Segments.Last());
+                string targetPath = Path.Combine(outputPath, targetName);
 
                 FileInfo targetFileInfo = new FileInfo(targetPath);
                 if(!targetFileInfo.Exists || targetFileInfo.Length == 0)
@@ -104,6 +110,7 @@ namespace M3uDownloader
             Console.WriteLine("Combining segments...");
 
             string fileName = rootPathUri.Segments.Last();
+            fileName = ReplaceInvalidChars(fileName);
             string filePath = Path.Combine(outputPath, fileName);
             if (filePath.EndsWith("/"))
             {
